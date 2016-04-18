@@ -249,9 +249,7 @@ public class JSONWebServiceDiscoverAction implements JSONWebServiceAction {
 
 			if (type.isInterface()) {
 				try {
-					Class<?> clazz = getClass();
-
-					ClassLoader classLoader = clazz.getClassLoader();
+					ClassLoader classLoader = type.getClassLoader();
 
 					String modelImplClassName =
 						_jsonWebServiceNaming.convertModelClassToImplClassName(
